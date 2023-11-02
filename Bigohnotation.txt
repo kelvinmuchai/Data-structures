@@ -1,0 +1,122 @@
+Number 1:
+O(1) = constant 
+example
+def const():
+    print(10*10)
+const()
+The above function takes a constant time to run.
+_________________________________________________________
+Number 2:
+O(n) = linear
+example cpde -:
+def linear(m):
+    print(10*20)
+a = [i for i in range(10)]
+linear(a)
+The above function grows linearly as a grows
+_________________________________________________________
+Number 3:
+O(n^2) 
+example code -:
+def squared(n):
+   for i in n:
+       for j in n:
+           print(j,n)
+a = [i for i in range(10)]
+squared(a) --> 100
+The function takes n*n time.
+_________________________________________________________
+Number 4:
+O(n^3)
+example code -:
+def cubed(n):
+    for i in n:
+        for j in n:
+            for k in n:
+                print(i,j,k)
+a = [i for i in range(10)]
+cubed(a) --> 1000
+The function takes n*n*n time.
+_________________________________________________________
+Number 5:
+O(log n)
+logarithms
+a^b = c
+base case in comp science is always 2
+log 8 = 3
+It is equal to 2^3 = 8
+def logfunc(n):
+    while n>1:
+        n = n/2
+    return n 
+n = 8
+logfunc(n)
+The above function runs ((8/2)/2)2 which is equal to 2^3 = 8.
+Hence the above function is of O(log n)
+We iterate through the function by log n times.
+
+##########################################################################
+Binary search and O(log n) --->
+In binary search the array must be ordered.
+array = [1,2,7,12,43,44,54,100,124]
+To find the value 100 in the array
+1.To search with binary search, we start by finding the midpoint.
+2.In the above array after we dind the midpoint we know that to the left the valuess are decreasing and to the right viceversa.
+3.hence we have a starting point and we use the values to the right.
+4.After we find the half where 100 is,we use the half where 100 might be.
+5.We continue this process until we find 100.
+
+THE PYTHON CODE IS AS FOLLOWS :
+This program is recursive --:
+def binary_search(data,target,low,high):
+    if low > high:
+        return False
+    else:  
+       
+        mid = (low + high ) // 2
+        if target == data[mid]:
+           print(data[target])
+        elif target < data[mid]:
+            print(data[:mid-1])
+            return binary_search(data,target,low,mid-1)
+           
+        else:
+            print(data[:mid+1])
+            return binary_search(data,target,mid+1,high)
+        
+data = [i for i in range(60)]
+target = 60
+low = 0
+high = len(data)-1
+binary_search(data,target,low,high)
+
+###########################################################################
+
+_________________________________________________________
+Number 6
+O(n log n)
+def nlogn(n):
+    y = n
+    while n > 1:
+         n = n//2
+         i = 1
+         while i <= y:
+               print(i)
+               i += 1
+nlogn(8)
+#########################################################
+Merge sort and O(nlogn) -->
+def mergesort(array):
+     if len(array)<2:
+         return array
+     middleindex = len(array)//2
+     leftarray = array[:middleindex]
+     rightarray = array[middleindex:]
+
+
+
+
+#########################################################
+
+
+_________________________________________________________

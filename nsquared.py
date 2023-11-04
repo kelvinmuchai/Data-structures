@@ -29,4 +29,14 @@ def fact(n):
                start *= i
           return start
 
-print(fact(2))
+print(fact(20))
+
+
+def factorial(n):
+     #Assuring that n is a positive integer or 0.
+     if n >= 1:
+          return n * fact(n-1)
+     else:
+          return 1
+     
+print(factorial(20))

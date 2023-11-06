@@ -8,12 +8,12 @@ The above function takes a constant time to run.
 _________________________________________________________
 Number 2:
 O(n) = linear
-example cpde -:
+example code -:
 def linear(m):
     print(10*20)
 a = [i for i in range(10)]
 linear(a)
-The above function grows linearly as a grows
+The above function grows linearly 
 _________________________________________________________
 Number 3:
 O(n^2) 
@@ -113,6 +113,32 @@ def mergesort(array):
      leftarray = array[:middleindex]
      rightarray = array[middleindex:]
 
+     leftarray = mergesort(leftarray)
+     rightarray = mergesort(rightarray)
+
+     return merge(leftarray,rightarray)
+   
+
+def merge(leftarray , rightarray):
+     result  = []
+     leftIndex = 0
+     rightIndex  = 0
+
+     while (leftIndex < len(leftarray) and rightIndex < len(rightarray)):
+          if leftarray[leftIndex] < rightarray[rightIndex]:
+               result.append(leftarray[leftIndex])
+               leftIndex += 1
+          else:
+               result.append(rightarray[rightIndex])
+               rightIndex += 1
+          result.extend(leftarray[leftIndex:])
+          result.extend(rightarray[rightIndex:])
+
+          return result
+     
+my_list = [3,6,7,8,34,87,32]
+sorted_list = mergesort(my_list)
+print(sorted_list)
 
 
 

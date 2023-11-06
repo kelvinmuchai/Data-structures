@@ -1,11 +1,16 @@
+#Merge sort and O(nlogn) -->
 def mergesort(array):
      if len(array)<2:
          return array
      middleindex = len(array)//2
      leftarray = array[:middleindex]
      rightarray = array[middleindex:]
-     return merge(mergesort(leftarray),mergesort(rightarray))
 
+     leftarray = mergesort(leftarray)
+     rightarray = mergesort(rightarray)
+
+     return merge(leftarray,rightarray)
+   
 
 def merge(leftarray , rightarray):
      result  = []
@@ -19,24 +24,12 @@ def merge(leftarray , rightarray):
           else:
                result.append(rightarray[rightIndex])
                rightIndex += 1
+          result.extend(leftarray[leftIndex:])
+          result.extend(rightarray[rightIndex:])
 
-def fact(n):
-     start = 1
-     if n == 0:
-          return 1
-     else:
-          for i in range(1,n+1):
-               start *= i
-          return start
-
-print(fact(20))
-
-
-def factorial(n):
-     #Assuring that n is a positive integer or 0.
-     if n >= 1:
-          return n * fact(n-1)
-     else:
-          return 1
+          return result
      
-print(factorial(20))
+my_list = [3,6,7,8,34,87,32]
+sorted_list = mergesort(my_list)
+print(sorted_list)
+

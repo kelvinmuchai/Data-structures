@@ -1,0 +1,76 @@
+#############################
+DATA STRUCTURES AND ALGORITHMS
+#############################
+A Data structure is an arrangement of data in a
+computer memory for efficient storage and management.
+
+                  data structure
+                       /\  
+                      /  \
+                     /    \
+                    /      \
+                   /        \
+                  /          \
+                 /            \
+            Linear          Non-Linear 
+            -------         -----------  
+            Arrays          Dictionaries
+            Lists           Hash tables
+            Stacks          Binary search trees,AVL trees,Red-black trees
+            Queues          Priority queues 
+            Vectors         Graphs
+
+An Algorithm is a finite set of instructions that,if followed , accomplishes a particular task.
+
+There are different ways used in analysis of algorithms.
+eg Big OH notation 
+Seven functions are used which are -->
+1. The Constant Function
+2. The Logarithm function e.g binary search
+3. The Linear function
+4. The N-Log-N function e.g merge sort
+5. The Quadratic function 
+6. The Cubic Function and Other Polynomials
+7. The Exponential Function
+
+Main Algorithms used are
+
+---------------------------------------
+SORTING ALGORITHMS
+---------------------------------------
+1. Quick sort
+2. merge sort
+3. Bubble sort
+4. Insertion sort
+5. Selection sort
+
+---------------------------------------
+SEARCHING ALGORITHMS
+---------------------------------------
+1. Binary search
+2. Linear search
+3. Hashing Algorithms
+
+---------------------------------------
+GRAPH ALGORITHMS
+---------------------------------------
+1. Dijkstra's Algorithm(shortest path)
+2. Breadth-first Algorithm(BFS)
+3. Depth-first Algorithm(DFS)
+4. Minimum spanning tree algorithms(i.e. prim's and kruskal's)
+
+--------------------------------------
+CRYPTOGRAPHY ALGORITHMS
+--------------------------------------
+1. RSA (public key cryptography)
+2. AES (Advanced encryption system)
+3. SHA-256 (Secure Hash Algorithm)
+4. Diffie-Hellman key exchange
+
+---------------------------------------
+COMPRESSION ALGORITHMS
+---------------------------------------
+1. Run-Length Encoding (RLE)
+2. Huffman Coding
+3. Lempel-Ziv-Welch (LZW)
+

@@ -147,7 +147,7 @@ visualising mergesort.
 array = [6,1,23,3,0]
 1.The if checks whether the array is not less than 
   one if it is it returns the array since it is already sorted.
-2.The the array is divided into two halfs.
+2.Then the array is divided into two halfs.
   leftarray = ([6,1]) >>>>> ([6]-->stops [1]-->stops)
   rightarray = [23,3,0] >>>>>>>([23]-->stops  [3,0]) >>>>>>  ([3]-->stops [0]-->stops)
 3.This process continues recursively until the array is 1
